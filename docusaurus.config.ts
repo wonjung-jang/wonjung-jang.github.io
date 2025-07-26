@@ -33,6 +33,31 @@ const config: Config = {
     locales: ["ko"],
   },
 
+  headTags: [
+    {
+      tagName: "link",
+      attributes: {
+        rel: "preconnect",
+        href: "https://fonts.googleapis.com",
+      },
+    },
+    {
+      tagName: "link",
+      attributes: {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossorigin: "anonymous",
+      },
+    },
+    {
+      tagName: "link",
+      attributes: {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap",
+      },
+    },
+  ],
+
   presets: [
     [
       "classic",
@@ -77,6 +102,21 @@ const config: Config = {
         showReadingTime: true,
       },
     ],
+    [
+      "@docusaurus/plugin-content-blog",
+      {
+        id: "diary-blog",
+        routeBasePath: "/diary",
+        path: "./blog/diary",
+        authorsMapPath: "../authors.yml",
+        blogTitle: "매일 원정",
+        blogDescription: "매일 원정",
+        blogSidebarTitle: "매일 원정",
+        blogSidebarCount: "ALL",
+        postsPerPage: 10,
+        showReadingTime: true,
+      },
+    ],
   ],
 
   themeConfig: {
@@ -93,11 +133,12 @@ const config: Config = {
       },
       items: [
         {
-          to: "/dev", // 개발 블로그 홈
+          to: "/dev",
           label: "개발 원정",
           position: "left",
         },
-        { to: "/daily", label: "일상 원정", position: "left" }, // 일상 블로그 홈
+        { to: "/daily", label: "일상 원정", position: "left" },
+        { to: "/diary", label: "매일 원정", position: "left" },
         {
           href: "https://github.com/wonjung-jang",
           position: "right",
@@ -117,7 +158,7 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} Wonjung, Inc. Built with Docusaurus.`,
     },
     prism: {
-      theme: prismThemes.github,
+      theme: prismThemes.oneDark,
     },
   } satisfies Preset.ThemeConfig,
 };

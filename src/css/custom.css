@@ -12,6 +12,125 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
   --ifm-navbar-height: 100px;
+
+  /* 한국어 폰트 적용 */
+  --ifm-font-family-base: "Noto Sans KR", "Apple SD Gothic Neo",
+    "Nanum Barun Gothic", "Nanum Gothic", Verdana, Arial, "Malgun Gothic", Dotum,
+    sans-serif;
+
+  /* 한국어 최적화 타이포그래피 */
+  --ifm-font-size-base: 16px;
+  --ifm-line-height-base: 1.7;
+  --ifm-letter-spacing-base: 0em;
+
+  /* 제목 폰트 크기 재정의 */
+  --ifm-h1-font-size: 2.25rem; /* 36px */
+  --ifm-h2-font-size: 1.875rem; /* 30px */
+  --ifm-h3-font-size: 1.5rem; /* 24px */
+  --ifm-h4-font-size: 1.25rem; /* 20px */
+  --ifm-h5-font-size: 1.125rem; /* 18px */
+  --ifm-h6-font-size: 1rem; /* 16px */
+}
+
+/* 텍스트 선택 시 배경색 */
+::selection {
+  background-color: var(--ifm-color-primary);
+  color: white;
+}
+
+/* Firefox 호환성 */
+::-moz-selection {
+  background-color: var(--ifm-color-primary);
+  color: white;
+}
+
+/* 전역 본문 스타일 - 한국어 최적화 */
+body {
+  font-size: var(--ifm-font-size-base);
+  line-height: var(--ifm-line-height-base);
+  letter-spacing: var(--ifm-letter-spacing-base);
+  word-spacing: 0em;
+}
+
+/* 제목 스타일 최적화 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: var(--ifm-h1-font-size);
+  margin-top: 0;
+}
+
+h2 {
+  font-size: var(--ifm-h2-font-size);
+}
+
+h3 {
+  font-size: var(--ifm-h3-font-size);
+}
+
+h4 {
+  font-size: var(--ifm-h4-font-size);
+}
+
+h5 {
+  font-size: var(--ifm-h5-font-size);
+}
+
+h6 {
+  font-size: var(--ifm-h6-font-size);
+}
+
+/* 단락 간격 최적화 */
+p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+/* 블로그 포스트 내용에서 개행 처리 */
+.markdown p {
+  white-space: pre-line;
+}
+
+/* 목록 스타일 개선 */
+ul,
+ol {
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* 인용문 스타일 */
+blockquote {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-left: 4px solid var(--ifm-color-primary);
+  background-color: rgba(107, 181, 138, 0.05);
+}
+
+/* 인라인 코드 스타일 */
+code:not(pre code) {
+  color: var(--ifm-color-primary);
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: none;
+  font-weight: 500;
+  font-size: 0.9em;
 }
 
 /* 블로그 사이드바 제목 말줄임 처리 */
@@ -31,5 +150,46 @@ aside a:hover,
 .theme-doc-sidebar-container a:hover,
 .blog-sidebar a:hover,
 [class*="sidebar"] a:hover {
-  text-decoration: none;
+  text-decoration: none !important;
+  background-color: rgba(107, 181, 138, 0.1) !important;
+  border-radius: 4px !important;
+}
+
+/* 블로그 포스트 제목 크기 조정 */
+.blog-post-page h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+/* 블로그 카드에서의 제목 크기 */
+.blog-post-card h2 {
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+/* 테이블 가독성 개선 */
+table {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+th,
+td {
+  padding: 12px 16px;
+}
+
+/* 강조 텍스트 */
+strong {
+  font-weight: 700;
+  color: var(--ifm-color-primary-dark);
+}
+
+/* 링크 스타일 개선 */
+a {
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--ifm-color-primary-dark);
 }
