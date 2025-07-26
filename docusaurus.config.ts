@@ -134,21 +134,6 @@ const config: Config = {
         showReadingTime: true,
       },
     ],
-    [
-      "@docusaurus/plugin-content-blog",
-      {
-        id: "diary-blog",
-        routeBasePath: "/diary",
-        path: "./blog/diary",
-        authorsMapPath: "../authors.yml",
-        blogTitle: "매일 원정",
-        blogDescription: "매일 원정",
-        blogSidebarTitle: "매일 원정",
-        blogSidebarCount: "ALL",
-        postsPerPage: 10,
-        showReadingTime: true,
-      },
-    ],
   ],
 
   themeConfig: {
@@ -163,7 +148,7 @@ const config: Config = {
       {
         name: "description",
         content:
-          "개발과 일상 이야기를 담은 블로그입니다. 개발 경험과 일상의 소중한 순간들을 공유합니다.",
+          "개발과 일상 이야기를 담은 블로그입니다. 개발 경험과 일상을 공유합니다.",
       },
       { name: "author", content: "장원정 (Wonjung Jang)" },
       { name: "robots", content: "index, follow" },
@@ -189,7 +174,6 @@ const config: Config = {
           position: "left",
         },
         { to: "/daily", label: "일상 원정", position: "left" },
-        { to: "/diary", label: "매일 원정", position: "left" },
         {
           href: "https://github.com/wonjung-jang",
           position: "right",
