@@ -1,22 +1,22 @@
 import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
+// Node.js에서 실행됩니다 - 클라이언트 사이드 코드를 사용하지 마세요 (브라우저 API, JSX 등)
 
 /**
- * Creating a sidebar enables you to:
- - create an ordered group of docs
- - render a sidebar for each doc of that group
- - provide next/previous navigation
+ * 사이드바를 생성하면 다음을 할 수 있습니다:
+ - 문서들의 순서가 있는 그룹 생성
+ - 각 문서 그룹에 대한 사이드바 렌더링
+ - 이전/다음 내비게이션 제공
 
- The sidebars can be generated from the filesystem, or explicitly defined here.
+ 사이드바는 파일 시스템에서 자동 생성되거나, 여기에서 명시적으로 정의할 수 있습니다.
 
- Create as many sidebars as you want.
+ 원하는 만큼 사이드바를 생성하세요.
  */
 const sidebars: SidebarsConfig = {
   // 블로그 사이드바 설정
   tutorialSidebar: ["dev", "daily"],
 
-  // But you can create a sidebar manually
+  // 수동으로 사이드바를 생성할 수도 있습니다
   /*
   tutorialSidebar: [
     'intro',

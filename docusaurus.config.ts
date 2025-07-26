@@ -2,35 +2,32 @@ import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
+// Node.js에서 실행됩니다 - 클라이언트 사이드 코드를 사용하지 마세요 (브라우저 API, JSX 등)
 
 const config: Config = {
   title: "원정 기록",
   tagline: "원정 기록",
   favicon: "img/favicon.ico",
 
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    v4: true,
   },
 
-  // Set the production url of your site here
   url: "https://wonjung-jang.github.io",
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+  // 사이트가 제공되는 /<baseUrl>/ 경로명을 설정하세요
+  // GitHub pages 배포의 경우, 보통 '/<프로젝트명>/'입니다
   baseUrl: "/",
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: "wonjung-jang", // Usually your GitHub org/user name.
-  projectName: "wonjung-jang.github.io", // Usually your repo name.
+  // GitHub pages 배포 설정
+  // GitHub pages를 사용하지 않는다면, 이 설정들은 필요하지 않습니다
+  organizationName: "wonjung-jang", // 보통 GitHub 조직/사용자 이름
+  projectName: "wonjung-jang.github.io", // 보통 저장소 이름
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
+  // 국제화를 사용하지 않더라도, 이 필드를 사용하여 html lang과 같은 유용한 메타데이터를 설정할 수 있습니다
+  // 예를 들어, 사이트가 중국어라면 "en"을 "zh-Hans"로 바꿀 수 있습니다
   i18n: {
     defaultLocale: "ko",
     locales: ["ko"],
@@ -40,9 +37,8 @@ const config: Config = {
     [
       "classic",
       {
-        blog: {
-          routeBasePath: "/docs",
-        },
+        docs: false,
+        blog: false, // 기본 블로그 비활성화
         theme: {
           customCss: "./src/css/custom.css",
         },
@@ -50,8 +46,40 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    [
+      "@docusaurus/plugin-content-blog",
+      {
+        id: "dev-blog",
+        routeBasePath: "/dev",
+        path: "./blog/dev",
+        authorsMapPath: "../authors.yml",
+        blogTitle: "개발 원정",
+        blogDescription: "개발과 관련된 이야기들",
+        blogSidebarTitle: "개발 원정",
+        blogSidebarCount: "ALL",
+        postsPerPage: 1,
+        showReadingTime: true,
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-blog",
+      {
+        id: "daily-blog",
+        routeBasePath: "/daily",
+        path: "./blog/daily",
+        authorsMapPath: "../authors.yml",
+        blogTitle: "일상 원정",
+        blogDescription: "일상 이야기들",
+        blogSidebarTitle: "일상 원정",
+        blogSidebarCount: "ALL",
+        postsPerPage: 1,
+        showReadingTime: true,
+      },
+    ],
+  ],
+
   themeConfig: {
-    // 프로젝트의 소셜 카드로 교체하세요
     image: "img/social-card.jpg",
     colorMode: {
       defaultMode: "light",
@@ -64,8 +92,12 @@ const config: Config = {
         src: "img/logo.svg",
       },
       items: [
-        { to: "/blog/dev", label: "개발 원정", position: "left" },
-        { to: "/blog/daily", label: "일상 원정", position: "left" },
+        {
+          to: "/dev", // 개발 블로그 홈
+          label: "개발 원정",
+          position: "left",
+        },
+        { to: "/daily", label: "일상 원정", position: "left" }, // 일상 블로그 홈
         {
           href: "https://github.com/wonjung-jang",
           position: "right",
