@@ -6,7 +6,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "원정 기록",
-  tagline: "원정 기록",
+  tagline: "개발 경험과 일상의 소중한 순간들을 공유하는 개발자 블로그",
   favicon: "img/favicon.ico",
 
   future: {
@@ -55,6 +55,38 @@ const config: Config = {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap",
       },
+    },
+    // 구조화된 데이터 (JSON-LD)
+    {
+      tagName: "script",
+      attributes: {
+        type: "application/ld+json",
+      },
+      innerHTML: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        name: "원정 기록",
+        description: "개발과 일상 이야기를 담은 블로그입니다.",
+        url: "https://wonjung-jang.github.io",
+        author: {
+          "@type": "Person",
+          name: "장원정 (Wonjung Jang)",
+          url: "https://github.com/wonjung-jang",
+          sameAs: [
+            "https://github.com/wonjung-jang",
+            "https://www.linkedin.com/in/원정-장-7ab179335/",
+          ],
+        },
+        publisher: {
+          "@type": "Person",
+          name: "장원정 (Wonjung Jang)",
+        },
+        potentialAction: {
+          "@type": "SearchAction",
+          target: "https://wonjung-jang.github.io/?q={search_term_string}",
+          "query-input": "required name=search_term_string",
+        },
+      }),
     },
   ],
 
@@ -121,6 +153,25 @@ const config: Config = {
 
   themeConfig: {
     image: "img/social-card.jpg",
+    // Global SEO metadata
+    metadata: [
+      {
+        name: "keywords",
+        content:
+          "개발, 프로그래밍, 웹개발, React, JavaScript, TypeScript, 일상, 블로그",
+      },
+      {
+        name: "description",
+        content:
+          "개발과 일상 이야기를 담은 블로그입니다. 개발 경험과 일상의 소중한 순간들을 공유합니다.",
+      },
+      { name: "author", content: "장원정 (Wonjung Jang)" },
+      { name: "robots", content: "index, follow" },
+      { name: "og:type", content: "website" },
+      { name: "og:site_name", content: "원정 기록" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:creator", content: "@wonjung_jang" },
+    ],
     colorMode: {
       defaultMode: "light",
       disableSwitch: true,

@@ -1,6 +1,6 @@
 ---
 title: TanStack Query는 어떻게 queryKey를 비교할까?
-description: TanStack Query를 학습하던 도중에 의문이 들었습니다.
+description: TanStack Query의 queryKey 비교 메커니즘을 분석해 봤습니다.
 slug: how-does-tanstack-query-compare-query-key
 authors: wonjung
 tags: [TanStackQuery]
