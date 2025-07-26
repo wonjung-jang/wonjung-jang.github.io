@@ -13,3 +13,23 @@
 
   --ifm-navbar-height: 100px;
 }
+
+/* 블로그 사이드바 제목 말줄임 처리 */
+aside a,
+.theme-doc-sidebar-container a,
+.blog-sidebar a,
+[class*="sidebar"] a {
+  max-width: 250px !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  display: block !important;
+}
+
+/* 사이드바 아이템 호버 효과 */
+aside a:hover,
+.theme-doc-sidebar-container a:hover,
+.blog-sidebar a:hover,
+[class*="sidebar"] a:hover {
+  text-decoration: none;
+}
