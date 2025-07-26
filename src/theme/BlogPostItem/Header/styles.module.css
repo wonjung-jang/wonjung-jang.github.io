@@ -1,0 +1,26 @@
+.blogPostItemHeader {
+  border-bottom: 1px solid var(--ifm-color-gray-200);
+  margin-bottom: 1rem;
+}
+
+.blogPostItemHeaderDescription {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blogPostItemHeaderMetaData {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.blogPostTags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
