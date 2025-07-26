@@ -72,6 +72,12 @@ const config: Config = {
           className: "header-github-link",
           ariaLabel: "GitHub Profile",
         },
+        {
+          href: "https://www.linkedin.com/in/%EC%9B%90%EC%A0%95-%EC%9E%A5-7ab179335/",
+          position: "right",
+          className: "header-linkedin-link",
+          ariaLabel: "LinkedIn Profile",
+        },
       ],
     },
     footer: {
