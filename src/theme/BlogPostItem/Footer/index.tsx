@@ -5,6 +5,7 @@ import { ThemeClassNames } from "@docusaurus/theme-common";
 import EditMetaRow from "@theme/EditMetaRow";
 import TagsListInline from "@theme/TagsListInline";
 import ReadMoreLink from "@theme/BlogPostItem/Footer/ReadMoreLink";
+import GiscusComponent from "@site/src/components/Giscus";
 
 export default function BlogPostItemFooter(): ReactNode {
   const { metadata, isBlogPostPage } = useBlogPost();
@@ -45,6 +46,9 @@ export default function BlogPostItemFooter(): ReactNode {
             lastUpdatedBy={lastUpdatedBy}
           />
         )}
+        <div className="margin-top--lg">
+          <GiscusComponent />
+        </div>
       </footer>
     );
   }
