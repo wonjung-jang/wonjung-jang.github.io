@@ -1,11 +1,8 @@
 import React, { type ReactNode } from "react";
-import clsx from "clsx";
 import { translate } from "@docusaurus/Translate";
 import { usePluralForm } from "@docusaurus/theme-common";
 import { useDateTimeFormat } from "@docusaurus/theme-common/internal";
 import { useBlogPost } from "@docusaurus/plugin-content-blog/client";
-import type { Props } from "@theme/BlogPostItem/Header/Info";
-
 import styles from "./styles.module.css";
 
 // Very simple pluralization: probably good enough for now
@@ -47,9 +44,7 @@ function Spacer() {
   return <>{" · "}</>;
 }
 
-export default function BlogPostItemHeaderInfo({
-  className,
-}: Props): ReactNode {
+export default function BlogPostItemHeaderInfo(): ReactNode {
   const { metadata } = useBlogPost();
   const { date, readingTime } = metadata;
 
@@ -64,7 +59,7 @@ export default function BlogPostItemHeaderInfo({
     dateTimeFormat.format(new Date(blogDate));
 
   return (
-    <div className={clsx(styles.container, className)}>
+    <div className={styles.container}>
       <DateTime date={date} formattedDate={formatDate(date)} />
       {typeof readingTime !== "undefined" && (
         <>
