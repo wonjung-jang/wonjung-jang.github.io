@@ -40,8 +40,9 @@ const config: Config = {
     [
       "classic",
       {
-        docs: false,
-        blog: false,
+        blog: {
+          routeBasePath: "/docs",
+        },
         theme: {
           customCss: "./src/css/custom.css",
         },
