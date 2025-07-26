@@ -5,7 +5,7 @@ export default function GiscusComponent() {
   return (
     <Giscus
       id="comments"
-      repo="wonjung-jang/wonjung-jang.github.io" // 여기에 실제 GitHub 저장소 경로를 입력하세요
+      repo="wonjung-jang/wonjung-jang.github.io"
       repoId="R_kgDOPS8_Yg"
       category="General"
       categoryId="DIC_kwDOPS8_Ys4CtblX"
