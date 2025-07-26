@@ -68,7 +68,7 @@ h6 {
 
 h1 {
   font-size: var(--ifm-h1-font-size);
-  margin-top: 0;
+  /* margin-top: 0; */
 }
 
 h2 {

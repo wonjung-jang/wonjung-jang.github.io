@@ -1,0 +1,50 @@
+.blogOwnerInformation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  height: calc(200px + 3rem);
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--ifm-color-gray-200);
+}
+
+.profileImage {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.blogOwnerDescription {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.socialSection {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.socialLink:first-child {
+  border-radius: 50%;
+}
+
+.socialLink:last-child {
+  border-radius: 0.5rem;
+}
+
+.socialLink:hover {
+  background-color: rgba(107, 181, 138, 0.1);
+}
+
+.socialLink:hover svg {
+  fill: var(--ifm-color-primary);
+}

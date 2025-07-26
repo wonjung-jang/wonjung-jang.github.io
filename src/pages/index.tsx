@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import Layout from "@theme/Layout";
-import HomepageFeatures from "@site/src/components/HomepageFeatures";
+import AboutMe from "../components/AboutMe";
 
 export default function Home(): ReactNode {
   return (
@@ -9,7 +9,7 @@ export default function Home(): ReactNode {
       description="Description will go into a meta tag in <head />"
     >
       <main>
-        <HomepageFeatures />
+        <AboutMe />
       </main>
     </Layout>
   );
