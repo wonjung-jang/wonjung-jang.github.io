@@ -1,13 +1,13 @@
 @import "./navbar.css";
 
 :root {
-  --ifm-color-primary: #a5d2b8;
-  --ifm-color-primary-dark: #88c3a1;
-  --ifm-color-primary-darker: #7ebf99;
-  --ifm-color-primary-darkest: #6bb58a;
-  --ifm-color-primary-light: #58ab7b;
-  --ifm-color-primary-lighter: #52a374;
-  --ifm-color-primary-lightest: #43865f;
+  --ifm-color-primary-lightest: #a5d2b8;
+  --ifm-color-primary-lighter: #88c3a1;
+  --ifm-color-primary-light: #7ebf99;
+  --ifm-color-primary: #6bb58a;
+  --ifm-color-primary-dark: #58ab7b;
+  --ifm-color-primary-darker: #52a374;
+  --ifm-color-primary-darkest: #43865f;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
