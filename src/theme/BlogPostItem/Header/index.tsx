@@ -6,10 +6,21 @@ import styles from "./styles.module.css";
 import { useBlogPost } from "@docusaurus/plugin-content-blog/client";
 import { useDateTimeFormat } from "@docusaurus/theme-common/internal";
 import Tag from "@theme/Tag";
+import Link from "@docusaurus/Link";
 
 export default function BlogPostItemHeader(): ReactNode {
   const { metadata } = useBlogPost();
-  const { tags } = metadata;
+  const { tags, permalink } = metadata;
+
+  // permalink로 어느 블로그인지 판단
+  const getListPath = () => {
+    if (permalink.startsWith("/dev/")) {
+      return "/dev";
+    } else if (permalink.startsWith("/daily/")) {
+      return "/daily";
+    }
+    return "/"; // 기본값
+  };
 
   const dateTimeFormat = useDateTimeFormat({
     day: "numeric",
@@ -23,6 +34,7 @@ export default function BlogPostItemHeader(): ReactNode {
 
   return (
     <header className={styles.blogPostItemHeader}>
+      <Link to={getListPath()}>← 목록으로</Link>
       <BlogPostItemHeaderTitle />
       <div className={styles.blogPostItemHeaderDescription}>
         <div className={styles.blogPostItemHeaderMetaData}>
