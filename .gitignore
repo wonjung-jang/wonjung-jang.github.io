@@ -18,3 +18,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Temporary blog post
+blog/dev/2025-07-27-use-overlay.mdx
