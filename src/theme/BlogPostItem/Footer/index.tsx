@@ -16,6 +16,7 @@ export default function BlogPostItemFooter(): ReactNode {
     hasTruncateMarker,
     lastUpdatedBy,
     lastUpdatedAt,
+    permalink,
   } = metadata;
 
   // A post is truncated if it's in the "list view" and it has a truncate marker
@@ -23,7 +24,8 @@ export default function BlogPostItemFooter(): ReactNode {
 
   const tagsExists = tags.length > 0;
 
-  const renderFooter = tagsExists || truncatedPost || editUrl;
+  // 상세 페이지에서는 항상 Footer를 렌더링
+  const renderFooter = isBlogPostPage || tagsExists || truncatedPost || editUrl;
 
   if (!renderFooter) {
     return null;
