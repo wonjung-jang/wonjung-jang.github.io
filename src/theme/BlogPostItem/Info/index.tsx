@@ -61,12 +61,13 @@ export default function BlogPostItemHeaderInfo(): ReactNode {
   return (
     <div className={styles.container}>
       <DateTime date={date} formattedDate={formatDate(date)} />
-      {typeof readingTime !== "undefined" && (
-        <>
-          <Spacer />
-          <ReadingTime readingTime={readingTime} />
-        </>
-      )}
+      <span>{metadata.authors[0].name}</span>
+      <div className={styles.authorImage}>
+        <img
+          src={metadata.authors[0].imageURL}
+          alt={metadata.authors[0].name}
+        />
+      </div>
     </div>
   );
 }

@@ -15,23 +15,23 @@ export default function BlogPostCard({
   const { metadata } = useBlogPost();
 
   return (
-    <Link
-      to={metadata.permalink}
-      className={styles.blogPostItemLink}
-      style={{ textDecoration: "none", color: "inherit" }}
-    >
-      <BlogPostItemContainer
-        className={clsx(className, styles.blogPostItemClickable)}
+    <>
+      <Link
+        to={metadata.permalink}
+        className={styles.blogPostItemLink}
+        style={{ textDecoration: "none", color: "inherit" }}
       >
-        <BlogPostItemHeaderInfo />
-        <BlogPostItemHeaderTitle />
-        <div className={styles.blogPostItemInformation}>
-          <span>{metadata.description}</span>
-          <span className={styles.blogPostItemAuthor}>
-            {metadata.authors[0].name}
-          </span>
-        </div>
-      </BlogPostItemContainer>
-    </Link>
+        <BlogPostItemContainer
+          className={clsx(className, styles.blogPostItemClickable)}
+        >
+          <BlogPostItemHeaderInfo />
+          <BlogPostItemHeaderTitle />
+          <p className={styles.blogPostItemInformation}>
+            {metadata.description}
+          </p>
+        </BlogPostItemContainer>
+      </Link>
+      <hr />
+    </>
   );
 }
