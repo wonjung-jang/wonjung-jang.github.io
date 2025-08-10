@@ -7,48 +7,45 @@ tags: []
 hide_table_of_contents: false
 ---
 
+import ImageWrapper from "@site/src/components/ImageWrapper";
+import ImageSlider from "@site/src/components/ImageSlider";
+
 ### 우연히 본 전시회
 
-<div
-  style={{
-    display: "flex",
-    gap: "1rem",
-    overflowX: "scroll",
-    margin: "1rem 0",
-    padding: "0 1rem",
-  }}
->
-  <img
-    src="/blog/daily/2025-07-27/전시회1.jpg"
-    alt="전시회에서 본 사진1"
-    height="300"
-  />
-  <img
-    src="/blog/daily/2025-07-27/전시회2.jpg"
-    alt="전시회에서 본 사진2"
-    height="300"
-  />
-  <img
-    src="/blog/daily/2025-07-27/전시회3.jpg"
-    alt="전시회에서 본 사진3"
-    height="300"
-  />
-  <img
-    src="/blog/daily/2025-07-27/전시회4.jpg"
-    alt="전시회에서 본 사진4"
-    height="300"
-  />
-  <img
-    src="/blog/daily/2025-07-27/전시회5.jpg"
-    alt="전시회에서 본 사진5"
-    height="300"
-  />
-  <img
-    src="/blog/daily/2025-07-27/전시회6.jpg"
-    alt="전시회에서 본 사진6"
-    height="300"
-  />
-</div>
+<ImageSlider
+  images={[
+    {
+      src: "/blog/daily/2025-07-27/전시회1.jpg",
+      alt: "전시회에서 본 사진1",
+      height: "300",
+    },
+    {
+      src: "/blog/daily/2025-07-27/전시회2.jpg",
+      alt: "전시회에서 본 사진2",
+      height: "300",
+    },
+    {
+      src: "/blog/daily/2025-07-27/전시회3.jpg",
+      alt: "전시회에서 본 사진3",
+      height: "300",
+    },
+    {
+      src: "/blog/daily/2025-07-27/전시회4.jpg",
+      alt: "전시회에서 본 사진4",
+      height: "300",
+    },
+    {
+      src: "/blog/daily/2025-07-27/전시회5.jpg",
+      alt: "전시회에서 본 사진5",
+      height: "300",
+    },
+    {
+      src: "/blog/daily/2025-07-27/전시회6.jpg",
+      alt: "전시회에서 본 사진6",
+      height: "300",
+    },
+  ]}
+/>
 
 오늘 집 앞에 롯데 아울렛을 갔다.
 점심 먹을 때가 돼서 민생 회복 쿠폰 사용처를 찾으러 휴대폰을 보면서 걷다가, 길을 잘못 들어서 고개를 들어보니 전시하고 있었다.
@@ -60,20 +57,11 @@ hide_table_of_contents: false
 
 ### 흡연자의 도덕?
 
-<div
-  style={{
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    margin: "1rem 0",
-  }}
->
-  <img
-    src="/blog/daily/2025-07-27/흡연자의_양심.jpg"
-    alt="흡연자의 양심"
-    width="50%"
-  />
-</div>
+<ImageWrapper
+  src="/blog/daily/2025-07-27/흡연자의_양심.jpg"
+  alt="흡연자의 양심"
+  width="50%"
+/>
 
 어제 하루 종일 집에 있어서 오늘은 공부하러 밖에 나왔다.
 집에 가려고 버스 정류장에서 조금 떨어진 곳이 흡연 장소인지 바닥에 꽁초가 널브러져 있었다.
@@ -82,20 +70,11 @@ hide_table_of_contents: false
 
 ### 해평 막걸리
 
-<div
-  style={{
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    margin: "1rem 0",
-  }}
->
-  <img
-    src="/blog/daily/2025-07-27/해평막걸리.jpg"
-    alt="흡연자의 양심"
-    width="50%"
-  />
-</div>
+<ImageWrapper
+  src="/blog/daily/2025-07-27/해평막걸리.jpg"
+  alt="해평막걸리"
+  width="50%"
+/>
 
 어제 술자리를 거절했던 친구한테 연락이 왔다.
 저번 주에 우리 집에 모자를 놓고 와서 받으러 올 겸 술을 먹자고 했다.

@@ -7,6 +7,8 @@ tags: [useOverlay]
 hide_table_of_contents: false
 ---
 
+import ImageWrapper from "@site/src/components/ImageWrapper";
+
 요즘 어떻게 학습해야 할지 고민이 많다.
 무언가를 깊게 알아보고 싶은데, 나와 너무 동떨어진 내용이면 흥미가 안 생긴다.
 그래서 책을 하나 잡고 보기에는 내 상황과 다른 게 많고 모든 내용이 와닿지 않는다.
@@ -23,9 +25,10 @@ hide_table_of_contents: false
 useOverlay란 Overlay를 선언적으로 쓸 수 있게 해주는 도구다.
 Overlay란 BottomSheet와 Dialog처럼 별도의 레이어에 띄우는 컴포넌트다.
 
-<img
+<ImageWrapper
   src="/blog/dev/2025-07-27-use-overlay/image.png"
   alt="useOverlay 공식 문서에 나와있는 설명"
+  width="70%"
 />
 
 여담으로 공식 문서를 보다가 "BottomSheet과"로 되어 있는 게 어색해서 "BottomSheet와"로 바꿔 생애 첫 오픈 소스 PR을 작성했다.
