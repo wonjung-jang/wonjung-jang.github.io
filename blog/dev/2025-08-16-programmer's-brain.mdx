@@ -7,13 +7,17 @@ tags: [프로그래머의 뇌]
 hide_table_of_contents: false
 ---
 
-import ImageWrapper from "@site/src/components/ImageWrapper";
+import ImageSlider from "@site/src/components/ImageSlider";
 import YouTube from "@site/src/components/YouTube";
 
-<ImageWrapper
-  src="/blog/dev/2025-08-10-programmer's-brain/book.png"
-  alt="프로그래머의 뇌 책 표지"
-  height="400px"
+<ImageSlider
+  images={[
+    {
+      src: "/blog/dev/2025-08-10-programmer's-brain/book.png",
+      alt: "프로그래머의 뇌 책 표지",
+      height: "400px",
+    },
+  ]}
 />
 
 ## 1. 코딩 중 겪는 혼란에 대한 이해
@@ -34,10 +38,14 @@ import YouTube from "@site/src/components/YouTube";
 코드 분석 시에 변수명, 키워드 등이 STM에 담긴다.
 단기 기억에는 최대 12개 이상의 정보를 저장할 수 없다.
 
-<ImageWrapper
-  src="/blog/dev/2025-08-10-programmer's-brain/brain.png"
-  alt="코드를 읽을 때 뇌의 처리영역을 그린 그림"
-  width="90%"
+<ImageSlider
+  images={[
+    {
+      src: "/blog/dev/2025-08-10-programmer's-brain/brain.png",
+      alt: "코드를 읽을 때 뇌의 처리영역을 그린 그림",
+      height: "400px",
+    },
+  ]}
 />
 
 LTM과 STM에 담긴 정보들은 작업 기억 공간에서 처리한다.

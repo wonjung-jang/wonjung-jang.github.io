@@ -7,7 +7,7 @@ tags: [GitActions, AutoAssignReviewer]
 hide_table_of_contents: false
 ---
 
-import ImageWrapper from "@site/src/components/ImageWrapper";
+import ImageSlider from "@site/src/components/ImageSlider";
 
 사내에서 PR을 작성할 때 리뷰어를 할당한다.
 피처 개발에 대한 PR인지, 이슈를 처리하는 PR인지, 피처 외의 개발에 대한 PR인지에 따라 리뷰어를 할당하는 방식이 조금씩 다르다.
@@ -22,11 +22,15 @@ import ImageWrapper from "@site/src/components/ImageWrapper";
 GitHub Actions는 CI/CD로 많이 활용되지만, 리포지토리에 다른 이벤트가 발생할 때 워크플로를 실행할 수 있는 기능 또한 제공한다.
 예를 들어 PR이 생성됐을 때마다 워크플로를 실행하여 자동으로 라벨을 붙여준다던가, 리뷰어를 할당해 줄 수 있다.
 
-<ImageWrapper
-  src="/blog/dev/2025-08-10-auto-assign-reviewers/github-actions.png"
-  alt="GitHub Actions가 실행되 걸 설명하는 이미지"
+<ImageSlider
+  images={[
+    {
+      src: "/blog/dev/2025-08-10-auto-assign-reviewers/github-actions.png",
+      alt: "GitHub Actions가 실행되 걸 설명하는 이미지",
+      height: "400px",
+    },
+  ]}
   description="GitHub Docs 공식 문서에서 가져온 이미지"
-  width="90%"
 />
 
 이벤트(PR이나 이슈가 생성 등)가 리포지토리에 발생할 때 트리거 되도록 워크플로를 구성할 수 있다.

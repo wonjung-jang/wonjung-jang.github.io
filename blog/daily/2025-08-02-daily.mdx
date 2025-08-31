@@ -7,15 +7,18 @@ tags: [강원도 고성]
 hide_table_of_contents: false
 ---
 
-import ImageWrapper from "@site/src/components/ImageWrapper";
 import ImageSlider from "@site/src/components/ImageSlider";
 
 ## 강원도 고성
 
-<ImageWrapper
-  src="/blog/daily/2025-08-02/고성.jpg"
-  alt="강원도 고성 사진"
-  width="70%"
+<ImageSlider
+  images={[
+    {
+      src: "/blog/daily/2025-08-02/고성.jpg",
+      alt: "강원도 고성 사진",
+      height: "400px",
+    },
+  ]}
 />
 
 오늘은 엄마랑 형이랑 강원도 고성으로 1박 2일 여행하는 날이다.
@@ -49,10 +52,14 @@ import ImageSlider from "@site/src/components/ImageSlider";
 
 ### 봉평 막국수
 
-<ImageWrapper
-  src="/blog/daily/2025-08-02/봉평_외관.jpg"
-  alt="봉평 막국수 외관 사진"
-  width="70%"
+<ImageSlider
+  images={[
+    {
+      src: "/blog/daily/2025-08-02/봉평_외관.jpg",
+      alt: "봉평 막국수 외관 사진",
+      height: "400px",
+    },
+  ]}
 />
 
 엄마가 고성 오면 꼭 먹는다는 봉평 막국수.

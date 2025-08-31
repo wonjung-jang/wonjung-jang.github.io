@@ -7,7 +7,6 @@ tags: [옥승철 작가님 전시회]
 hide_table_of_contents: false
 ---
 
-import ImageWrapper from "@site/src/components/ImageWrapper";
 import ImageSlider from "@site/src/components/ImageSlider";
 
 ## 옥승철 작가님 전시회
@@ -132,10 +131,14 @@ import ImageSlider from "@site/src/components/ImageSlider";
 
 멍 때리는? 센치한? 친구들도 있었고~
 
-<ImageWrapper
-  src="/blog/daily/2025-08-15/옥승철_전시회_18.jpg"
-  alt="옥승철 작가님 전시회 사진 사진18"
-  width="70%"
+<ImageSlider
+  images={[
+    {
+      src: "/blog/daily/2025-08-15/옥승철_전시회_18.jpg",
+      alt: "옥승철 작가님 전시회 사진 사진18",
+      height: "400px",
+    },
+  ]}
   description="잔뜩 화나 있는 친구"
 />
 
@@ -195,19 +198,28 @@ import ImageSlider from "@site/src/components/ImageSlider";
 
 ADOY의 VIVID 앨범 커버(좌), Pool 앨범 커버(우)도 있었다.
 
-<ImageWrapper
-  src="/blog/daily/2025-08-15/ADOY_ CATNIP_앨범커버.webp"
-  alt="ADOY CATNIP 앨범 커버 사진"
-  width="70%"
+<ImageSlider
+  images={[
+    {
+      src: "/blog/daily/2025-08-15/ADOY_ CATNIP_앨범커버.webp",
+      alt: "ADOY CATNIP 앨범 커버 사진",
+      height: "400px",
+    },
+  ]}
   description="ADOY CATNIP 앨범 커버 사진"
 />
 
 개인적으로 이 앨범 커버를 제일 좋아하는데, 없어서 아쉬웠다... ㅠㅠ
 
-<ImageWrapper
-  src="/blog/daily/2025-08-15/옥승철_전시회_20.jpg"
-  alt="옥승철 작가님 전시회 사진 사진20"
-  width="100%"
+<ImageSlider
+  images={[
+    {
+      src: "/blog/daily/2025-08-15/옥승철_전시회_20.jpg",
+      alt: "옥승철 작가님 전시회 사진 사진20",
+      height: "400px",
+    },
+  ]}
+  description="가장 마음에 들었던 작품"
 />
 
 그리고 이번 전시회에서 가장 좋았던 투샷!

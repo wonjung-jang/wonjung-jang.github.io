@@ -7,7 +7,6 @@ tags: [우연히 본 전시회, 해평 막걸리]
 hide_table_of_contents: false
 ---
 
-import ImageWrapper from "@site/src/components/ImageWrapper";
 import ImageSlider from "@site/src/components/ImageSlider";
 
 ### 우연히 본 전시회
@@ -57,10 +56,14 @@ import ImageSlider from "@site/src/components/ImageSlider";
 
 ### 흡연자의 도덕?
 
-<ImageWrapper
-  src="/blog/daily/2025-07-27/흡연자의_양심.jpg"
-  alt="흡연자의 양심"
-  width="50%"
+<ImageSlider
+  images={[
+    {
+      src: "/blog/daily/2025-07-27/흡연자의_양심.jpg",
+      alt: "흡연자의 양심",
+      height: "400px",
+    },
+  ]}
 />
 
 어제 하루 종일 집에 있어서 오늘은 공부하러 밖에 나왔다.
@@ -70,10 +73,14 @@ import ImageSlider from "@site/src/components/ImageSlider";
 
 ### 해평 막걸리
 
-<ImageWrapper
-  src="/blog/daily/2025-07-27/해평막걸리.jpg"
-  alt="해평막걸리"
-  width="50%"
+<ImageSlider
+  images={[
+    {
+      src: "/blog/daily/2025-07-27/해평막걸리.jpg",
+      alt: "해평막걸리",
+      height: "400px",
+    },
+  ]}
 />
 
 어제 술자리를 거절했던 친구한테 연락이 왔다.
